@@ -8,7 +8,7 @@
 #include <iostream>
 void MainWindow::loadBirds(){
     QString fileName = QFileDialog::getOpenFileName(this,
-                                                    tr("Megnyitas"), "/users/sheep/Documents/QT/madargyuruzes", tr("*.txt"));
+                                                    tr("Megnyitas"), "./", tr("*.txt"));
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
         QMessageBox::warning(this, "File Error", "Unable to open the file");
